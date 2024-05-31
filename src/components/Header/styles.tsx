@@ -1,49 +1,109 @@
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 
+// Animação do logo
 const logoAnimation = keyframes`
-0%{
-    transform:scale(1);
+0% {
+    transform: scale(1);
 }
-50%{
-    transform:scale(1.1);
+50% {
+    transform: scale(1.1);
 }
-100%{
-    transform:scale(1);
+100% {
+    transform: scale(1);
 }
-`
-export const Container = styled.nav`
+`;
+
+export const TagHeader = styled.header``;
+
+// Container do menu de navegação
+export const NavContainer = styled.nav`
 background: rgba(0, 0, 0, 0.3);
-width:100%;
-display:flex;
-justify-content:space-between;
+width: 100%;
+display: flex;
+justify-content: space-between;
 align-items: center;
 padding: 1rem 2rem;
-position:fixed;
-`
-export const Logo = styled(Link)`
-color:#ebebeb;
-font-size:1.5rem;
-font-weight:bold;
-text-decoration:none;
-transition:color 0.3s ease-in-out;
-&:hover{
-    animation: ${logoAnimation} 1s linear infinite;
-    color:#D19B6F;
+position: fixed;
+z-index: 1000;
+
+@media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
 }
-`
+`;
+
+// Estilo do logo
+export const Logo = styled(Link)`
+color: #ebebeb;
+font-size: 1.5rem;
+text-decoration: none;
+transition: color 0.3s ease-in-out;
+
+&:hover {
+    animation: ${logoAnimation} 1s linear infinite;
+    color: #d19b6f;
+}
+
+@media (max-width: 768px) {
+    font-size: 1.2rem;
+}
+`;
+
+// Container dos links de navegação
 export const NavLinks = styled.div`
-a{
-    color:#ebebeb;
-    text-decoration:none;
-    margin-left:1.5rem;
-    font-size:1rem;
-    transition:color 0.3s ease-in-out;
-    &:hover{
-    color:#D19B6F;
+display: flex;
+align-items: center;
+
+@media (max-width: 768px) {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    transition: max-height 0.3s ease-in-out;
+}
+
+&.open {
+    @media (max-width: 768px) {
+        max-height: 500px; /* Ajuste este valor conforme necessário */
     }
 }
-`
-export const FocusLinks = styled.a`
+
+a {
+    color: #ebebeb;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: #d19b6f;
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+}
+`;
+
+export const ItensMenu = styled.div`
+display: none;
 cursor: pointer;
-`
+
+@media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    right: 2rem;
+}
+`;
+
+//barra de opções
+export const ItensIcon = styled.div`
+width: 25px;
+height: 2px;
+background-color: #ebebeb;
+margin: 5px 0;
+`;
