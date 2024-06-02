@@ -17,7 +17,7 @@
   display: block;
   width: var(--size);
   height: var(--size);
-  background-color: #e68a00;
+  background-color: #c27e47;
   border-radius: 1.5rem;
   z-index: -1;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);

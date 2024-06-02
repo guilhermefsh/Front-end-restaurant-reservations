@@ -18,7 +18,7 @@ export const TagHeader = styled.header``;
 
 // Container do menu de navegação
 export const NavContainer = styled.nav`
-background: rgba(0, 0, 0, 0.3);
+background: rgba(0, 0, 0, 0.2);
 width: 100%;
 display: flex;
 justify-content: space-between;
@@ -26,6 +26,10 @@ align-items: center;
 padding: 1rem 2rem;
 position: fixed;
 z-index: 1000;
+
+&.scrolled{
+    background-color:#e7e7e7;
+}
 
 @media (max-width: 768px) {
     flex-direction: column;
@@ -40,6 +44,10 @@ color: #ebebeb;
 font-size: 1.5rem;
 text-decoration: none;
 transition: color 0.3s ease-in-out;
+
+&.scrolled{
+   color: #191919;
+}
 
 &:hover {
     animation: ${logoAnimation} 1s linear infinite;
@@ -66,9 +74,13 @@ align-items: center;
 
 &.open {
     @media (max-width: 768px) {
-        max-height: 500px; /* Ajuste este valor conforme necessário */
+        max-height: 500px;
     }
 }
+
+&.scrolled a{
+   color: #191919;
+    }
 
 a {
     color: #ebebeb;
@@ -92,6 +104,10 @@ a {
 export const ItensMenu = styled.div`
 display: none;
 cursor: pointer;
+
+&.scrolled > *{
+   background-color: #191919;
+}
 
 @media (max-width: 768px) {
     display: block;
