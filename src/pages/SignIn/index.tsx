@@ -1,7 +1,7 @@
 import {
     AreaLogin,
     ButtonForm,
-    ButtonLink,
+    LinkBT,
     Container,
     FormLogin,
     InputForm,
@@ -25,12 +25,12 @@ export const SignIn = () => {
                 </AreaLogin>
                 <AreaLogin>
                     <ButtonForm>Logar</ButtonForm>
-                    <ButtonLink>
+                    <LinkBT>
                         <Link to='/cadastro'
                             style={{ textDecoration: 'none', color: 'white' }}
                         >Fazer cadastro
                         </Link>
-                    </ButtonLink>
+                    </LinkBT>
                 </AreaLogin>
             </FormLogin>
         </Container>

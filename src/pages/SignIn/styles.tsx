@@ -2,14 +2,31 @@ import styled from "styled-components";
 import background from '../../assets/loginback.jpg'
 
 export const Container = styled.div`
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-background-image:url(${background});
-background-size:cover;
-background-position:center;
-`
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-image: url(${background});
+background-size: cover;
+background-position: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Camada preta semitransparente */
+    z-index: 1;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+`;
 export const FormLogin = styled.form`
 width:400px;
 height:400px;
@@ -95,25 +112,9 @@ transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     transform: translateY(0);
 }
 `
-export const ButtonLink = styled.button`
-width: 300px;
-height: 2.5rem;
-border-radius: 12px;
-background-color: #f79e55;
-color: white;
-font-size: 18px;
-font-weight: bold;
-border: none;
-cursor: pointer;
-transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  
-&:hover {
-    background-color: #d68746;
-    transform: translateY(-2px);
-}
-  
-&:active {
-    background-color: #d38b4c;
-    transform: translateY(0);
-}
-`
+export const LinkBT = styled.div`
+  margin-top: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+`;
