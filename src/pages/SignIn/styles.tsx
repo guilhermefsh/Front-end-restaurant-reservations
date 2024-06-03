@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from '../../assets/loginback.jpg'
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
 position: relative;
@@ -46,12 +47,13 @@ flex-direction:column;
 gap:0.75rem;
 `
 
-export const Logo = styled.h3`
+export const Logo = styled(Link)`
 color:#D19B6F;
 font-size:32px;
 text-align:center;
 margin-top:2rem;
 margin-bottom:1rem;
+text-decoration:none;
 cursor: pointer;
 &:hover {
     color: #d68746;

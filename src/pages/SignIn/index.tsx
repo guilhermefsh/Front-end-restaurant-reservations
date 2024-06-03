@@ -14,7 +14,9 @@ export const SignIn = () => {
     return (
         <Container>
             <FormLogin>
-                <Logo>La Casa di Gastone</Logo>
+                <AreaLogin>
+                    <Logo to='/'>La casa di Gastone</Logo>
+                </AreaLogin>
                 <AreaLogin>
                     <LabelLogin>Email</LabelLogin>
                     <InputForm placeholder='Digite seu email' type='text' />
