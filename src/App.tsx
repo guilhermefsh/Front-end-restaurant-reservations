@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./components/layout";
 import { SignIn } from "./pages/SignIn";
 import { Cadastro } from "./pages/Cadastro";
+import { Dashboard } from "./pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "cadastro",
     element: <Cadastro />
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />
   }
 ])
 

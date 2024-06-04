@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
-import { NavContainer, ItensIcon, ItensMenu, Logo, NavLinks, TagHeader } from "./styles"
+import { NavContainer, ItensMenu, Logo, NavLinks, TagHeader } from "./styles"
 import { Link } from "react-router-dom"
+import { FaBars } from "react-icons/fa";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -31,9 +32,7 @@ export const Header = () => {
             <NavContainer className={scrolled ? 'scrolled' : ''}>
                 <Logo to="/" className={scrolled ? 'scrolled' : ''} >La casa di Gastone</Logo>
                 <ItensMenu onClick={toggleMenu} className={scrolled ? 'scrolled' : ''}>
-                    <ItensIcon />
-                    <ItensIcon />
-                    <ItensIcon />
+                    <FaBars size={34} color="white" style={{ marginTop: -10 }} />
                 </ItensMenu>
                 <NavLinks className={`${isOpen ? 'open' : ''} ${scrolled ? 'scrolled' : ''}`}>
                     <Link to="/cardapio">CARDÁPIO</Link>

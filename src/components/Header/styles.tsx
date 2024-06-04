@@ -116,10 +116,3 @@ cursor: pointer;
 }
 `;
 
-//barra de opções
-export const ItensIcon = styled.div`
-width: 25px;
-height: 2px;
-background-color: #ebebeb;
-margin: 5px 0;
-`;
