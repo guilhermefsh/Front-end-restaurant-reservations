@@ -1,6 +1,6 @@
 import { FaBars, FaCalendarTimes } from 'react-icons/fa';
 import foto from '../../assets/user.jpg';
-import { ButtonMenu, Container, ItensMenu, Logo, LogoArea, Menu, UserDetails, UserImg, UserInfo } from "./styles";
+import { ButtonMenu, Container, ItensMenu, LinkPage, Logo, LogoArea, Menu, UserDetails, UserImg, UserInfo } from "./styles";
 import { CiForkAndKnife } from 'react-icons/ci';
 import { GiKnifeFork } from 'react-icons/gi';
 import { MdTableRestaurant } from 'react-icons/md';
@@ -26,7 +26,7 @@ export const Sidebar = () => {
                 <FaBars size={34} color='white' />
             </ItensMenu>
             <Menu className={isOpen ? 'open' : ''}>
-                <ButtonMenu><GiKnifeFork size={20} /> CADASTRO DE CARDÁPIO</ButtonMenu>
+                <ButtonMenu><GiKnifeFork size={20} /> <LinkPage to={"novocardapio"}>CADASTRO DE CARDÁPIO</LinkPage></ButtonMenu>
                 <ButtonMenu><CiForkAndKnife size={20} /> EDITAR DE CARDÁPIO</ButtonMenu>
                 <ButtonMenu><MdTableRestaurant size={20} /> CADASTRAR MESAS</ButtonMenu>
                 <ButtonMenu><FaCalendarTimes size={20} /> RESERVAS</ButtonMenu>

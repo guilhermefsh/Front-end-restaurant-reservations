@@ -4,6 +4,7 @@ import { Layout } from "./components/layout";
 import { SignIn } from "./pages/SignIn";
 import { Cadastro } from "./pages/Cadastro";
 import { Dashboard } from "./pages/Dashboard";
+import { NovoCardapio } from "./pages/NovoCardapio";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "dashboard",
     element: <Dashboard />
+  },
+  {
+    path: "dashboard/novocardapio",
+    element: <NovoCardapio />
   }
 ])
 

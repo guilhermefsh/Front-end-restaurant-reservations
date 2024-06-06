@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -83,16 +84,14 @@ export const ButtonMenu = styled.button`
 width: 100%;
 height: 2rem;  /* Reduzir a altura */
 background-color: transparent;
-color: white;
 cursor: pointer;
 border-top: none;
 border-left: none;
 border-right: none;
-border-color: white;
 display: flex;
 align-items: center;
 justify-content: center;
-gap: 6px;  /* Reduzir o gap */
+color:white;
 
 &:hover {
   background-color: rgb(235, 235, 235);
@@ -143,3 +142,11 @@ cursor: pointer;
   margin-top: 5px;  /* Reduzir a margem superior */
 }
 `;
+
+export const LinkPage = styled(Link)`
+text-decoration:none;
+color:white;
+&:hover {
+  color: black;
+}
+`
