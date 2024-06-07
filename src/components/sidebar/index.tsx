@@ -8,7 +8,7 @@ import Clock from 'react-live-clock';
 import { useState } from 'react';
 
 export const Sidebar = () => {
-
+    const dashboardlink = import.meta.env.VITE_APP_DASHBOARD_LINK;
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     const showSideBar = () => {
@@ -26,7 +26,7 @@ export const Sidebar = () => {
                 <FaBars size={34} color='white' />
             </ItensMenu>
             <Menu className={isOpen ? 'open' : ''}>
-                <ButtonMenu><GiKnifeFork size={20} /> <LinkPage to={"novocardapio"}>CADASTRO DE CARDÁPIO</LinkPage></ButtonMenu>
+                <ButtonMenu><GiKnifeFork size={20} /> <LinkPage to={`/${dashboardlink}/novocardapio`}>CADASTRO DE CARDÁPIO</LinkPage></ButtonMenu>
                 <ButtonMenu><CiForkAndKnife size={20} /> EDITAR DE CARDÁPIO</ButtonMenu>
                 <ButtonMenu><MdTableRestaurant size={20} /> CADASTRAR MESAS</ButtonMenu>
                 <ButtonMenu><FaCalendarTimes size={20} /> RESERVAS</ButtonMenu>

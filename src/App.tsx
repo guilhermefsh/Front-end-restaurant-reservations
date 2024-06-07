@@ -6,6 +6,8 @@ import { Cadastro } from "./pages/Cadastro";
 import { Dashboard } from "./pages/Dashboard";
 import { NovoCardapio } from "./pages/NovoCardapio";
 
+const dashboardlink = import.meta.env.VITE_APP_DASHBOARD_LINK;
+
 const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -25,11 +27,11 @@ const router = createBrowserRouter([
     element: <Cadastro />
   },
   {
-    path: "dashboard",
+    path: `/${dashboardlink}`,
     element: <Dashboard />
   },
   {
-    path: "dashboard/novocardapio",
+    path: `/${dashboardlink}/novocardapio`,
     element: <NovoCardapio />
   }
 ])
